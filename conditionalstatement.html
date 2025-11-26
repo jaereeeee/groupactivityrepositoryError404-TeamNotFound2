@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditional Statement</title>
+    <title>Conditional Statements</title>
+    <link rel="stylesheet" href="conditionalstatement.css">
 </head>
 <body>
-    <h1>Group Activity</h1>
-    <h2>Error 404: Team Not Found</h2>
-    <h3>Group Members: Rosa, Romangaya, Canete</h3>
+    <h1>Team 505: Brain Not Ready</h1>
+    <h1>Showcasing if / else Conditions in JavaScript</h1>
+    <p>This page demonstrates simple conditional statements using JavaScript's <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+
+
+    <section class="example">
+        <h2>Age Checker (if / else)</h2>
+        <p>Enter your age and click <strong>Check Age</strong>. The script uses an <code>if</code> / <code>else</code> statement to decide whether the person is an adult.</p>
+        <label for="ageInput">Age:</label>
+        <input id="ageInput" type="number" min="0" max="100" placeholder="Enter age" />
+        <button id="checkAgeBtn">Check Age</button>
+        <p class="result" id="ageResult" aria-live="polite"></p>
+    </section>
+    <!-- Example 3: temperature advice (if / else if / else) -->
+    <section class="example">
+        <h2>Temperature Advice (if / else if / else)</h2>
+        <p>Type a temperature in Celsius. The script decides what to recommend using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+        <label for="tempInput">Temperature (°C):</label>
+        <input id="tempInput" type="number" placeholder="e.g., 25" />
+        <button id="tempBtn">Get Advice</button>
+        <p class="result" id="tempResult" aria-live="polite"></p>
+    </section>
+
+     
+    <section class="example">
+        <h2>Guess the Color (if / else if / else)</h2>
+        <p>Type a Random Color. The script decides what to recommend using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+        <label for="colorInput">Color:</label>
+        <input id="colorInput" type="text" placeholder="e.g., red" />
+        <button id="colorBtn">Guess</button>
+        <p class="result" id="colorResult" aria-live="polite"></p>
+    </section>
+
     <script src="conditionalstatement.js"></script>
-    
 </body>
-</html> 
+</html>
