@@ -26,20 +26,30 @@
         <p>Type a temperature in Celsius. The script decides what to recommend using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
         <label for="tempInput">Temperature (°C):</label>
         <input id="tempInput" type="number" placeholder="e.g., 25" />
-        <button id="tempBtn">Get Advice</button>
+        <button id="tempBtn">Get Advice</button>  
         <p class="result" id="tempResult" aria-live="polite"></p>
     </section>
 
-     
+<div>  
     <section class="example">
         <h2>Guess the Color (if / else if / else)</h2>
-        <p>Type a Random Color. The script decides what to recommend using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
-        <label for="colorInput">Color:</label>
-        <input id="colorInput" type="text" placeholder="e.g., red" />
-        <button id="colorBtn">Guess</button>
+        <p>Type a Random Color.<code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+        <label for="level">Level of Difficulty:</label>
+        <select name="level" id="level" placeholder="Choose a Level">
+        <option value="Easy">Easy</option>
+        <option value="Normal">Normal</option>
+        <option value="Hard">Hard</option>
+        </select>
+         <label for="colorInput">Color:</label>
+        <input id="colorInput" type="text" placeholder="Type a color" />
+        <button id="colorBtn">Check Color</button>  
         <p class="result" id="colorResult" aria-live="polite"></p>
-    </section>
+    </section>  
+</div>
+
 
     <script src="conditionalstatement.js"></script>
 </body>
 </html>
+
+

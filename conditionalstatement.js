@@ -1,4 +1,4 @@
-window.alert("Team 505: Brain Not Ready");
+//window.alert("Team 505: Brain Not Ready");
 
 const ageInput = document.getElementById('ageInput');
         const checkAgeBtn = document.getElementById('checkAgeBtn');
@@ -55,98 +55,112 @@ const ageInput = document.getElementById('ageInput');
         const colorInput = document.getElementById('colorInput');
         const colorBtn = document.getElementById('colorBtn');
         const colorResult = document.getElementById('colorResult');
+        const levelSelect = document.getElementById('level');
+        let color;
+        const level = levelSelect.value;
+        
+        
 
-        colorBtn.addEventListener('click', () => {
-            const color = colorInput.value.trim().toLowerCase();
-            if (!color) {
-                colorResult.textContent = 'Please enter a color.';
-                colorResult.style.color = 'crimson';
-                return;
-            }
+colorBtn.addEventListener('click', () => {
+    const color = colorInput.value.trim().toLowerCase();
+    const level = document.getElementById("level").value;
+    const colorResult = document.getElementById("colorResult");
 
-            if (color === 'red') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'blue') {
-                colorResult.textContent = 'Wrong Guess! But you are getting closer.';
-                colorResult.style.color = 'red';
-            } else if (color === 'green') {
-                colorResult.textContent = 'Good Guess, but Wrong!';
-                colorResult.style.color = 'red';
-            } else if (color === 'yellow') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'pink') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'black') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'white') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'purple') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'orange') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'brown') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'grey') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'cyan') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'magenta') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'lime') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'teal') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'navy') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'olive') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'maroon') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'violet') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'indigo') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'silver') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'gold') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'beige') {
-                colorResult.textContent = 'Correct Guess, Congratulations!';
-                colorResult.style.color = 'green';
-            } else if (color === 'coral') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'salmon') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'turquoise') {
-                colorResult.textContent = 'Wrong Guess!';
-                colorResult.style.color = 'red';
-            } else if (color === 'lapu lapu') {
-                colorResult.textcontent = 'Correct Guess,Congratulations!';
-                colorResult.style.color = 'red';
-            } else {
-                colorResult.textContent = `Try again!`;
-                colorResult.style.color = 'grey';
-            }
-        });
+    if (!color) {
+        colorResult.textContent = 'Please enter a color.';
+        colorResult.style.color = 'crimson';
+        return;
+    }
+    if (!level) {
+        colorResult.textContent = 'Please select a level.';
+        colorResult.style.color = 'crimson';
+        return;
+    }
+    
+    if (color === 'red') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'blue') {
+        colorResult.textContent = 'Wrong Guess! But you are getting closer.';
+        colorResult.style.color = 'red';
+    } else if (color === 'green') {
+        colorResult.textContent = 'Good Guess, but Wrong!';
+        colorResult.style.color = 'red';
+    } else if (color === 'yellow') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'pink') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'black') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'white') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'purple') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'orange') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'brown') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'grey') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'cyan') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'magenta') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'lime') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'teal') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'navy') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'olive') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'maroon') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'violet') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'indigo') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'silver') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'gold') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'beige') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else if (color === 'coral') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'salmon') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'turquoise') {
+        colorResult.textContent = 'Wrong Guess!';
+        colorResult.style.color = 'red';
+    } else if (color === 'lapu lapu') {
+        colorResult.textContent = 'Correct Guess, Congratulations!';
+        colorResult.style.color = 'green';
+    } else {
+        colorResult.textContent = `Try again!`;
+        colorResult.style.color = 'grey';
+    }
+});
+
